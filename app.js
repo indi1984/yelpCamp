@@ -22,7 +22,7 @@ const MongoStore = require('connect-mongo');
 const app = express();
 
 
-const dbUrl = process.env.DB_URL || 'mongodb://localhost:27017/yelp-camp';
+const dbUrl = process.env.DB_URL;
 mongoose.connect(dbUrl, {
   useNewUrlParser: true,
   useCreateIndex: true,
@@ -39,7 +39,7 @@ app.engine('ejs', ejsMate);
 app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, 'views'));
 
-const secret = process.env.SECRET || 'thisshouldbeabettersecret';
+const secret = process.env.SECRET;
 
 const store = MongoStore.create({
   mongoUrl: dbUrl,
