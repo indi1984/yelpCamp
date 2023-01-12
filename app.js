@@ -22,8 +22,7 @@ const MongoStore = require('connect-mongo');
 const app = express();
 
 
-const dbUrl = 'mongodb://localhost:27017/yelp-camp';
-// const dbUrl = process.env.DB_URL;
+const dbUrl = process.env.DB_URL || 'mongodb://localhost:27017/yelp-camp';
 mongoose.connect(dbUrl, {
   useNewUrlParser: true,
   useCreateIndex: true,
@@ -40,11 +39,13 @@ app.engine('ejs', ejsMate);
 app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, 'views'));
 
+const secret = process.env.SECRET || 'thisshouldbeabettersecret';
+
 const store = MongoStore.create({
   mongoUrl: dbUrl,
   touchAfter: 24 * 60 * 60,
   crypto: {
-    secret: 'thisshouldbeabettersecret',
+    secret: secret,
   },
 });
 
@@ -55,7 +56,7 @@ store.on('error', function(e) {
 const sessionConfig = {
   store: store,
   name: 'session',
-  secret: 'thisshouldbeabettersecret',
+  secret: secret,
   resave: false,
   saveUninitialized: true,
   cookie: {
