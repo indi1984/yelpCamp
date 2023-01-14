@@ -170,5 +170,5 @@ app.use((err, req, res, next) => {
 // ERROR HANDLERS ***************************************************
 
 app.listen(3000, () => {
-  console.log('SERVING ON PORT 3000!');
+  console.log('SERVING VIA RENDER');
 });
