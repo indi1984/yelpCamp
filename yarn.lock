@@ -841,6 +841,11 @@ eslint-config-google@^0.14.0:
   resolved "https://registry.yarnpkg.com/eslint-config-google/-/eslint-config-google-0.14.0.tgz#4f5f8759ba6e11b424294a219dbfa18c508bcc1a"
   integrity sha512-WsbX4WbjuMvTdeVL6+J3rK1RGhCTqjsFjX7UMSMgZiyxxaNLkoJENbrGExzERFeoTpGw3F3FypTiWAP9ZXzkEw==
 
+eslint-plugin-ejs@^0.0.2:
+  version "0.0.2"
+  resolved "https://registry.yarnpkg.com/eslint-plugin-ejs/-/eslint-plugin-ejs-0.0.2.tgz#d17be92e8010262491d11efbeba7d626681eb18d"
+  integrity sha512-+84/3PtAyzI+3FQQvnmOX1+cY1jiiTNpLvpzIE/v0KApzBEL4UZ+Rg4YsM0GlM4QRav8EwDAQcSh2X0QbA5jkQ==
+
 eslint-scope@^7.1.1:
   version "7.1.1"
   resolved "https://registry.yarnpkg.com/eslint-scope/-/eslint-scope-7.1.1.tgz#fff34894c2f65e5226d3041ac480b4513a163642"

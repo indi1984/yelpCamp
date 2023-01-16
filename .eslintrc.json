@@ -7,6 +7,9 @@
     },
     "extends": "google",
     "overrides": [],
+    "plugins": [
+        "ejs"
+    ],
     "parserOptions": {
         "ecmaVersion": "latest"
     },
