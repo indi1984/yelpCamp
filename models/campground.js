@@ -1,3 +1,4 @@
+/* eslint-disable max-len */
 const mongoose = require('mongoose');
 const Review = require('./review');
 const Schema = mongoose.Schema;
